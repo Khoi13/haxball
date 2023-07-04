@@ -1,7 +1,12 @@
 import HaxballJS from 'haxball.js';
 import { RSMapRaw } from './map.js';
 
-const HBInit: any = await HaxballJS;
+let HBInit: any;
+
+(async function () {
+    HBInit = await HaxballJS;
+})();
+
 console.log(HaxballJS);
 console.log(HBInit);
 const THROW_TIME_OUT = 420; // 7 seconds (const is in game ticks)
